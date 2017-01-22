@@ -66,11 +66,25 @@ extern {
     pub fn ao_initialize();
     pub fn ao_shutdown();
     pub fn ao_append_global_option(key: *const c_char, value: *const c_char) -> c_int;
-    pub fn ao_append_option(options: *mut *mut ao_option, key: *const c_char, value: *const c_char) -> c_int;
+    pub fn ao_append_option(options: *mut *mut ao_option,
+                            key: *const c_char,
+                            value: *const c_char)
+                            -> c_int;
     pub fn ao_free_options(options: *mut ao_option);
-    pub fn ao_open_live(driver_id: c_int, format: *mut ao_sample_format, option: *mut ao_option) -> *mut ao_device;
-    pub fn ao_open_file(driver_id: c_int, filename: *const c_char, overwrite: c_int, format: *mut ao_sample_format, option: *mut ao_option) -> *mut ao_device;
-    pub fn ao_play(device: *mut ao_device, output_samples: *mut c_char, num_bytes: uint32_t) -> c_int;
+    pub fn ao_open_live(driver_id: c_int,
+                        format: *mut ao_sample_format,
+                        option: *mut ao_option)
+                        -> *mut ao_device;
+    pub fn ao_open_file(driver_id: c_int,
+                        filename: *const c_char,
+                        overwrite: c_int,
+                        format: *mut ao_sample_format,
+                        option: *mut ao_option)
+                        -> *mut ao_device;
+    pub fn ao_play(device: *mut ao_device,
+                   output_samples: *mut c_char,
+                   num_bytes: uint32_t)
+                   -> c_int;
     pub fn ao_close(device: *mut ao_device) -> c_int;
     pub fn ao_driver_id(short_name: *const c_char) -> c_int;
     pub fn ao_default_driver_id() -> c_int;
