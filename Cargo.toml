@@ -10,5 +10,8 @@ repository = "https://github.com/stainless-steel/ao-sys"
 build = "build.rs"
 links = "ao"
 
+[dependencies]
+libc = "0.2"
+
 [build-dependencies]
 pkg-config = "0.3"
