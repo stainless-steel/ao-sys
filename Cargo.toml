@@ -1,13 +1,13 @@
 [package]
 name = "ao-sys"
-version = "0.1.1"
+version = "0.1.2"
 license = "Apache-2.0/MIT"
 authors = ["Ivan Ukhov <ivan.ukhov@gmail.com>"]
 description = "The package provides bindings to ao."
 documentation = "https://docs.rs/ao-sys"
 homepage = "https://github.com/stainless-steel/ao-sys"
 repository = "https://github.com/stainless-steel/ao-sys"
-categories = ["external-ffi-bindings", "multimedia"]
+categories = ["external-ffi-bindings", "multimedia::audio"]
 keywords = ["audio", "sound"]
 build = "build.rs"
 links = "ao"
